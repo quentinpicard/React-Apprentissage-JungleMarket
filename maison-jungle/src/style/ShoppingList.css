@@ -1,0 +1,9 @@
+.lmj-plant{
+    margin: 24px;
+    display: block;
+}
+
+.lmj-all-plant{
+    display: flex;
+    flex-direction: row;
+}
