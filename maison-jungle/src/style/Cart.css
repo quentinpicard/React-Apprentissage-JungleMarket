@@ -1,0 +1,35 @@
+.lmj-panier{
+    margin: 24px 16px;
+    border: 1px solid #2d2d2d;
+    width: 17%;
+    border-radius: 8px;
+}
+
+.lmj-panier-title{
+    padding: 4px 0px 4px 32px;
+    width: 87%;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.lmj-panier-total{
+    width: 74%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 32px 4px 32px;
+    align-items: center;
+    border-top: 1px solid #2d2d2d;
+}
+
+.lmj-panier-total p:first-child{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+ul{
+    padding: 24px 32px
+}
+li{
+    list-style: none;
+    padding: 6px 0;
+}
