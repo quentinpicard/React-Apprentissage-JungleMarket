@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './style/index.css';
 import App from './composants/App';
 import Cart from './composants/Cart';
+import ShoppingList from './composants/ShoppingList';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Cart />
+    <div className='main'>
+      <Cart />
+      <ShoppingList />
+    </div>
   </React.StrictMode>
 );
 
