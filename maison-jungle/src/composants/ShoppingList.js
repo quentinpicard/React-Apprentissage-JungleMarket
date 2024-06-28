@@ -8,26 +8,32 @@ function ShoppingList () {
             acc.includes(plant.category)? acc:acc.concat(plant.category), [] // on regarde la valeur de category et on le concat dans un tableau vide []
     )
     return (
-        <div>
+        <div className='lmj-main-plant'>
 
             <div className='lmg-type-categories'>
-                <p>Nos catégories de plante </p>
-                {categories.map((cat) => (
-                    <div key='cat'>{cat}</div>
-                ))}
+                <p>Nos catégories de plante : </p>
+                <div className='lmj-catego'>
+                    {categories.map((cat) => (
+                        <div key='cat' >
+                                {cat}
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className='lmj-all-plant'>
-
-                {plantList.map((plant) =>(
-                    <div key={plant.id} className='lmj-plant'>
-                        <div>{plant.name}</div>
-                        <div>{plant.category}</div>
-                        <div>{plant.isBestSale? <p>🔥</p> : null} </div>
-                        <div>{plant.isSpecialOffer? <p>-20%</p> : null}</div>
-                            
-                    
-                    </div>
-                ))}
+                <div className='lmj-scroll-plant'>
+                    {plantList.map((plant) =>(
+                        <div key={plant.id} className='lmj-plant'>
+                            <div>{plant.name}</div>
+                            <div>{plant.category}</div>
+                            <div>{plant.isBestSale? <p>🔥</p> : null} </div>
+                            <div>{plant.isSpecialOffer? <p>-20%</p> : null}</div>
+                                
+                        
+                        </div>
+                    ))}
+                </div>
+                
             </div>
         
 

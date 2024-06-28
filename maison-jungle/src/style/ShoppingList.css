@@ -1,9 +1,47 @@
 .lmj-plant{
+    width: 1000px;
     margin: 24px;
     display: block;
+    padding: 24px;
+    border: 1px solid #2d2d2d;
+    border-radius: 4px;
 }
 
 .lmj-all-plant{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.lmj-scroll-plant{
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 190%;
+    overflow-x: scroll;
+}
+
+.lmj-main-plant{
+    flex: 1 0 80%;
+    overflow-y: hidden;
+}
+
+.lmg-type-categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+} 
+
+.lmg-type-categories p{
+    margin-right: 16px;
+    flex: 0 1 20%;
+}
+.lmj-catego{
+    flex: 1 0 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
