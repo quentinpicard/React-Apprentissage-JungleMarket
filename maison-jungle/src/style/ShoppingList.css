@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    overflow-y: hidden;
+
 }
 
 .lmj-scroll-plant{
@@ -24,6 +24,7 @@
 .lmj-main-plant{
     flex: 1 0 80%;
     overflow-y: hidden;
+
 }
 
 .lmg-type-categories{
@@ -44,4 +45,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.lmj-plant-list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+	max-width: 100%;
 }

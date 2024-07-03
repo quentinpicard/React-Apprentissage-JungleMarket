@@ -1,6 +1,5 @@
 import { plantList } from '../data/plantList';
 import '../style/ShoppingList.css'
-import CareScale from './CareScale';
 import PlantItem from './PlantItem';
 
 
@@ -23,8 +22,9 @@ function ShoppingList () {
                     ))}
                 </div>
             </div>
-            <div className='lmj-all-plant'>
-                <div className='lmj-scroll-plant'>
+            
+            <div className='lmj-main-plant'>
+                <div className='lmj-plant-list'>
                     {plantList.map(({name, cover, id, water, light}) =>(
                         <PlantItem
                             id={id}
@@ -34,9 +34,7 @@ function ShoppingList () {
                             light={light}
                         />
                     ))}
-                    
                 </div>
-                
             </div>
         
 

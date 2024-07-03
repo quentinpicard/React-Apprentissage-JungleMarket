@@ -1,12 +1,19 @@
 import CareScale from './CareScale';
 import '../style/PlantItem.css'
 
+function handleClick (plantName){ //permet de gérer les événement sur react
+    // console.log("hello world");
+    alert (`Vous voulez acheter 1 ${plantName} ? Très bon choix :) `);
+    
+}
+
+
 function PlantItem ({name, cover, id, light, water}){
     
 
     return (
-        <div className="lmj-plant-item">
-            <img src={cover} alt={`${name} cover`} className='lmj-logo'></img>
+        <div className="lmj-plant-item" onClick={() => handleClick(name)}> 
+            <img src={cover} alt={`${name} cover`} className='lmj-plant-item-cover'></img>
             {name}
             <div>
                 <CareScale careType='water' scaleValue={water} />
@@ -15,5 +22,7 @@ function PlantItem ({name, cover, id, light, water}){
         </div>
     )
 }
+
+
 
 export default PlantItem; 
