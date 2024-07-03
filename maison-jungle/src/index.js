@@ -6,11 +6,13 @@ import Cart from './composants/Cart';
 import ShoppingList from './composants/ShoppingList';
 import reportWebVitals from './reportWebVitals';
 // import CareScale from './composants/CareScale';
+import QuestionForm from './composants/QuestionForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <QuestionForm />
     <div className='main-container'>
       <Cart />
       <ShoppingList />
