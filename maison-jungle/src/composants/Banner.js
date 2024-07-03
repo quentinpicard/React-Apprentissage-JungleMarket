@@ -1,13 +1,13 @@
 import '../style/Banner.css';
-import logo from'../asset/logo.png';
+// import logo from'../asset/logo.png';
 
-function Banner(){
-    const title = "La maison jungle";
+function Banner({children}){
     return (
         <div className="lmj-banner">
             <div className='lmj-title-logo'>
-                <img src={logo} alt='logo de la maison jgl' className='lmj-logo'></img>
-                <h1 className='lmj-title'>{title}</h1>
+                {/* <img src={logo} alt='logo de la maison jgl' className='lmj-logo'></img> */}
+                {/* <h1 className='lmj-title'>{children}</h1> */}
+                {children}
             </div>
         </div>
         

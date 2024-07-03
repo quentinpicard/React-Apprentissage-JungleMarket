@@ -5,6 +5,7 @@ import App from './composants/App';
 import Cart from './composants/Cart';
 import ShoppingList from './composants/ShoppingList';
 import reportWebVitals from './reportWebVitals';
+// import CareScale from './composants/CareScale';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

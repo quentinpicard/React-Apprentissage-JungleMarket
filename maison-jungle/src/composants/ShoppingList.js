@@ -1,5 +1,7 @@
 import { plantList } from '../data/plantList';
 import '../style/ShoppingList.css'
+import CareScale from './CareScale';
+import PlantItem from './PlantItem';
 
 
 function ShoppingList () {
@@ -9,7 +11,7 @@ function ShoppingList () {
     )
     return (
         <div className='lmj-main-plant'>
-
+            
             <div className='lmg-type-categories'>
                 <p>Nos catégories de plante : </p>
                 <div className='lmj-catego'>
@@ -24,14 +26,18 @@ function ShoppingList () {
                 <div className='lmj-scroll-plant'>
                     {plantList.map((plant) =>(
                         <div key={plant.id} className='lmj-plant'>
-                            <div>{plant.name}</div>
+                            {/* <div>{plant.name}</div> */}
+                            <PlantItem namePlant={plant.name} />
                             <div>{plant.category}</div>
                             <div>{plant.isBestSale? <p>🔥</p> : null} </div>
                             <div>{plant.isSpecialOffer? <p>-20%</p> : null}</div>
-                                
+                            <CareScale careType='water' scaleValue={plant.water} />
+                            <CareScale careType='light' scaleValue={plant.light} />
+
                         
                         </div>
                     ))}
+                    
                 </div>
                 
             </div>
