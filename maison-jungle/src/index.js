@@ -2,21 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
 import App from './composants/App';
-import Cart from './composants/Cart';
-import ShoppingList from './composants/ShoppingList';
 import reportWebVitals from './reportWebVitals';
-// import CareScale from './composants/CareScale';
-import QuestionForm from './composants/QuestionForm';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <QuestionForm />
-    <div className='main-container'>
-      <Cart />
-      <ShoppingList />
-    </div>
   </React.StrictMode>
 );
 
