@@ -4,6 +4,7 @@ import CareScale from './CareScale';
 import PlantItem from './PlantItem';
 
 
+
 function ShoppingList () {
     const categories = plantList.reduce( // récupère les valeurs de catégories dans le tableau plantList et on le met dans une boucle reduce()
         (acc, plant) =>
@@ -24,18 +25,14 @@ function ShoppingList () {
             </div>
             <div className='lmj-all-plant'>
                 <div className='lmj-scroll-plant'>
-                    {plantList.map((plant) =>(
-                        <div key={plant.id} className='lmj-plant'>
-                            {/* <div>{plant.name}</div> */}
-                            <PlantItem namePlant={plant.name} />
-                            <div>{plant.category}</div>
-                            <div>{plant.isBestSale? <p>🔥</p> : null} </div>
-                            <div>{plant.isSpecialOffer? <p>-20%</p> : null}</div>
-                            <CareScale careType='water' scaleValue={plant.water} />
-                            <CareScale careType='light' scaleValue={plant.light} />
-
-                        
-                        </div>
+                    {plantList.map(({name, cover, id, water, light}) =>(
+                        <PlantItem
+                            id={id}
+                            cover={cover}
+                            name={name}
+                            water={water}
+                            light={light}
+                        />
                     ))}
                     
                 </div>
