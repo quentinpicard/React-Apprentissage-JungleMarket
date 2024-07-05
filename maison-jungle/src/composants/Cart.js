@@ -2,9 +2,13 @@ import { useState } from 'react'
 import '../style/Cart.css'
 
 function Cart() {
-	const monsteraPrice = 8
-	const [cart, updateCart] = useState(0)
-	const [isOpen, setIsOpen] = useState(true)
+	const monsteraPrice = 8;
+	const [cart, updateCart] = useState(0);
+	const [isOpen, setIsOpen] = useState(true);
+
+    const resetInput = () => {
+        updateCart(0);
+    };
 
 	return isOpen ? (
 		<div className='lmj-cart'>
@@ -17,7 +21,8 @@ function Cart() {
 			<h2>Panier</h2>
 			<div>Monstera : {monsteraPrice}€</div>
 			<button onClick={() => updateCart(cart + 1)}>Ajouter</button>
-			<h3>Total : {monsteraPrice * cart}€</h3>
+			<h3>Total : { monsteraPrice * cart}€</h3>
+            <button onClick={resetInput}>vider le panier</button>
 		</div>
 	) : (
 		<div className='lmj-cart-closed'>
