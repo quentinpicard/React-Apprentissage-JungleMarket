@@ -13,10 +13,6 @@ function CareScale ({scaleValue, careType}) {
             2: "modérement",
             3: "beaucoup"
         };
-        // alert(`${rang.map((element) => scaleValue == element ? messages[element] : null )}`)
-
-
-        // alert(`${careType == 'light' ? 'Soleil' : 'Eau'} : ${scaleValue}`);
         
         if (careType == 'light') {
             alert (`Cette plante requiert ${rang.map((element) => scaleValue === element ? messages[element] : '' )

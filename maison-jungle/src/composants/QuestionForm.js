@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../style/Cart.css';
 
 function QuestionForm() {
     // Initialisation de l'état avec une valeur par défaut
@@ -16,7 +17,7 @@ function QuestionForm() {
     }
 
     return (
-        <div>
+        <div className='hidden'>
             <textarea
                 value={inputValue} // Liaison de l'état à la valeur du textarea
                 onChange={(e) => checkValue(e.target.value)} // Mise à jour de l'état avec la nouvelle valeur
