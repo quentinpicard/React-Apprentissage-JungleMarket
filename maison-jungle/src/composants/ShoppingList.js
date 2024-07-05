@@ -6,7 +6,11 @@ import { useState } from 'react';
 
 
 function ShoppingList ({cart, updateCart}) {
-    const [catego, updateCategos] = useState(0);
+    const [Selectedcatego, setActiveCategory] = useState('');
+    const categories = plantList.reduce( // récupère les valeurs de catégories dans le tableau plantList et on le met dans une boucle reduce()
+        (acc, plant) =>
+            acc.includes(plant.category)? acc:acc.concat(plant.category), [] // on regarde la valeur de category et on le concat dans un tableau vide []
+    )
 
     
     function addToCart(name, price) {
@@ -27,17 +31,17 @@ function ShoppingList ({cart, updateCart}) {
     return (
         <div className='lmj-main-plant'>
             
-            <Categories catego={catego} updateCategos={updateCategos} />
+            <Categories Selectedcatego={Selectedcatego} setActiveCategory={setActiveCategory} categories={categories}/>
             <div className='lmj-main-plant'>
                 <div className='lmj-plant-list'>
-                    {plantList.map(({name, cover, id, water, light, price}) =>(
-                        <div key={id}>
+                    {plantList.map(({name, cover, id, water, light, price, category}) => !Selectedcatego || Selectedcatego === category ?(
+                        <div key={id} className='lmj-cart-plant'>
                             <PlantItem id={id} cover={cover} name={name} water={water} light={light} />
                             <button onClick={() => addToCart(name, price)}>Ajouter</button>
                         </div>
                         
                         
-                    ))}
+                    ) : null)}
                 </div>
                 
             </div>

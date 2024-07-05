@@ -51,8 +51,10 @@
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-between;
-	max-width: 100%;
+    justify-content: left;
+}
+.lmj-cart-plant{
+    flex: 0 1 25%;
 }
 select{
     width: 100%;
