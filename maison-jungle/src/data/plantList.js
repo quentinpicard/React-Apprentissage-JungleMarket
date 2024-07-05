@@ -12,7 +12,7 @@ export const plantList = [
 	{
 		name: 'monstera',
 		cover: monstera,
-		category: 'classique',
+		category: 'Classique',
 		id: '1ed',
 		isBestSale: true,
 		isSpecialOffer : true,
@@ -23,7 +23,7 @@ export const plantList = [
 	{
 		name: 'ficus lyrata',
 		cover: lyrata,
-		category: 'classique',
+		category: 'Classique',
 		id: '2ab',
 		isBestSale: false,
 		isSpecialOffer : true,
@@ -34,7 +34,7 @@ export const plantList = [
 	{
 		name: 'pothos argenté',
 		cover: pothos,
-		category: 'classique',
+		category: 'Classique',
 		id: '3sd',
 		isBestSale: false,
 		isSpecialOffer : false,
@@ -45,7 +45,7 @@ export const plantList = [
 	{
 		name: 'Calathea',
 		cover: calathea,
-		category: 'classique',
+		category: 'Classique',
 		id: '4kk',
 		isBestSale: false,
 		isSpecialOffer : false,
@@ -56,7 +56,7 @@ export const plantList = [
 	{
 		name: 'olivier',
 		cover: olivier,
-		category: 'extérieur',
+		category: 'Extérieur',
 		id: '5pl',
 		isBestSale: false,
 		isSpecialOffer : true,
@@ -67,7 +67,7 @@ export const plantList = [
 	{
 		name: 'Menthe',
 		cover: mint,
-		category: 'extérieur',
+		category: 'Extérieur',
 		id: '6uo',
 		isBestSale: false,
 		isSpecialOffer : false,
@@ -78,7 +78,7 @@ export const plantList = [
 	{
 		name: 'basilique',
 		cover: basil,
-		category: 'extérieur',
+		category: 'Extérieur',
 		id: '7ie',
 		isBestSale: false,
 		isSpecialOffer : false,
@@ -89,7 +89,7 @@ export const plantList = [
 	{
 		name: 'Cactus',
 		cover: cactus,
-		category: 'plante grasse',
+		category: 'Plante grasse',
 		id: '8fp',
 		isBestSale: false,
 		isSpecialOffer : false,
@@ -100,7 +100,7 @@ export const plantList = [
 	{
 		name: 'succulente',
 		cover: succulente,
-		category: 'plante grasse',
+		category: 'Plante grasse',
 		id: '9vn',
 		isBestSale: false,
 		isSpecialOffer : false,
