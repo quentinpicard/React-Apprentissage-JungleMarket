@@ -4,11 +4,28 @@ import PlantItem from './PlantItem';
 
 
 
-function ShoppingList () {
+function ShoppingList ({cart, updateCart}) {
     const categories = plantList.reduce( // récupère les valeurs de catégories dans le tableau plantList et on le met dans une boucle reduce()
         (acc, plant) =>
             acc.includes(plant.category)? acc:acc.concat(plant.category), [] // on regarde la valeur de category et on le concat dans un tableau vide []
     )
+
+    
+    function addToCart(name, price) {
+		const currentPlantSaved = cart.find((plant) => plant.name === name)
+		if (currentPlantSaved) {
+			const cartFilteredCurrentPlant = cart.filter(
+				(plant) => plant.name !== name
+			)
+			updateCart([
+				...cartFilteredCurrentPlant,
+				{ name, price, amount: currentPlantSaved.amount + 1 }
+			])
+		} else {
+			updateCart([...cart, { name, price, amount: 1 }])
+		}
+	}
+
     return (
         <div className='lmj-main-plant'>
             
@@ -25,16 +42,16 @@ function ShoppingList () {
             
             <div className='lmj-main-plant'>
                 <div className='lmj-plant-list'>
-                    {plantList.map(({name, cover, id, water, light}) =>(
-                        <PlantItem
-                            id={id}
-                            cover={cover}
-                            name={name}
-                            water={water}
-                            light={light}
-                        />
+                    {plantList.map(({name, cover, id, water, light, price}) =>(
+                        <div key={id}>
+                            <PlantItem id={id} cover={cover} name={name} water={water} light={light} />
+                            <button onClick={() => addToCart(name, price)}>Ajouter</button>
+                        </div>
+                        
+                        
                     ))}
                 </div>
+                
             </div>
         
 

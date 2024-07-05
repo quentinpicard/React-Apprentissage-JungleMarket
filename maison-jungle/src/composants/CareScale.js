@@ -1,4 +1,4 @@
-import { plantList } from '../data/plantList';
+// import { plantList } from '../data/plantList';
 
 
 
@@ -14,7 +14,7 @@ function CareScale ({scaleValue, careType}) {
             3: "beaucoup"
         };
         
-        if (careType == 'light') {
+        if (careType === 'light') {
             alert (`Cette plante requiert ${rang.map((element) => scaleValue === element ? messages[element] : '' )
                 .filter(message => message !== '').filter(message => message !== '')
                 .join('')} de soleil. `
