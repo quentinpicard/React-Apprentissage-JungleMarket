@@ -1,9 +1,11 @@
 import '../style/Cart.css';
+import { useState } from 'react';
 
 function Cart () {
     const monstera = 8;
-    const lierre = 10;
-    const bouquetDeFleurs = 15;
+
+    const [cart, updateCart] = useState(0);
+
     return (
         <div className="lmj-panier">
             <div className="lmj-panier-title">
@@ -11,12 +13,13 @@ function Cart () {
             </div>
             <ul className="lmj-panier-liste">
                 <li>Monstera : {monstera} €</li>
-                <li>Lierre : {lierre} €</li>
-                <li>Bouquet de Fleur : {bouquetDeFleurs} €</li>
+                <button onClick={()=> updateCart(cart + 1)}>
+                    Ajouter
+                </button>
             </ul>
             <div className="lmj-panier-total">
                 <p>Total</p>
-                <p>{monstera + lierre + bouquetDeFleurs} €</p>
+                <p>{monstera * cart} €</p>
             </div>
         </div>
     );
