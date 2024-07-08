@@ -1,21 +1,22 @@
 // Importation du fichier CSS pour appliquer les styles
 import '../style/ShoppingList.css';
 
-
-
 // Définition du composant fonctionnel Categories
-function Categories ({ Selectedcatego, setActiveCategory, categories }) {
-
+function Categories({ Selectedcatego, setActiveCategory, categories }) {
     return (
         <div className='lmg-type-categories'>
             {/* Conteneur principal pour les catégories */}
             <div className='lmj-catego'>
                 <div className='lmj-cat'>
                     {/* Étiquette pour le menu déroulant */}
-                    <label htmlFor="fruits">Choisissez votre catégorie de plantes :</label>
+                    <label htmlFor="plantCategories">Choisissez votre catégorie de plantes :</label>
                     <br />
                     {/* Menu déroulant pour sélectionner une catégorie */}
-                    <select id='plantCategories'  value={Selectedcatego} onChange={(e) => setActiveCategory(e.target.value)}>
+                    <select
+                        id='plantCategories'
+                        value={Selectedcatego}
+                        onChange={(e) => setActiveCategory(e.target.value)}
+                    >
                         {/* Génération des options du menu déroulant à partir des catégories */}
                         {categories.map((cat) => (
                             <option key={cat} value={cat}>
@@ -30,7 +31,7 @@ function Categories ({ Selectedcatego, setActiveCategory, categories }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 // Exportation du composant pour pouvoir l'utiliser dans d'autres fichiers

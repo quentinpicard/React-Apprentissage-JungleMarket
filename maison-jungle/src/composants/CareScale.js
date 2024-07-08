@@ -1,43 +1,42 @@
-// import { plantList } from '../data/plantList';
-
-
-
-function CareScale ({scaleValue, careType}) {
+// Définition du composant fonctionnel CareScale
+function CareScale({ scaleValue, careType }) {
+    // Tableau des niveaux de soin
     const rang = [1, 2, 3];
-    const scaleType = careType === 'light' ? '☀️': '💧';
-    
+    // Définition du type de soin (☀️ pour lumière, 💧 pour eau)
+    const scaleType = careType === 'light' ? '☀️' : '💧';
 
-    function handleClick (scaleValue){ //permet de gérer les événement sur react
+    // Fonction pour gérer les clics sur un élément de soin
+    function handleClick(scaleValue) {
+        // Messages correspondant aux niveaux de soin
         const messages = {
             1: "peu",
             2: "modérement",
             3: "beaucoup"
         };
-        
+
+        // Affichage d'une alerte en fonction du type de soin et de la valeur du niveau
         if (careType === 'light') {
-            alert (`Cette plante requiert ${rang.map((element) => scaleValue === element ? messages[element] : '' )
-                .filter(message => message !== '').filter(message => message !== '')
-                .join('')} de soleil. `
-            );
+            alert(`Cette plante requiert ${rang.map((element) => 
+                scaleValue === element ? messages[element] : ''
+            ).filter(message => message !== '').join('')} de soleil.`);
+        } else {
+            alert(`Cette plante requiert ${rang.map((element) => 
+                scaleValue === element ? messages[element] : ''
+            ).filter(message => message !== '').join('')} d'eau.`);
         }
-        else {
-            alert (`Cette plante requiert ${rang.map((element) => 
-                scaleValue === element ? messages[element] : '' )
-                .filter(message => message !== '').filter(message => message !== '')
-                .join('')} d'eau. `
-            );
-        }
-        
     }
 
-    return  (
-        <div onClick={() => handleClick(scaleValue) }>
+    // Rendu du composant
+    return (
+        // Conteneur principal avec un gestionnaire de clic
+        <div onClick={() => handleClick(scaleValue)}>
+            {/* Affichage des icônes de soin en fonction du niveau */}
             {rang.map((rangElem) => 
-            scaleValue >= rangElem ? <span key={rangElem.toString()}>{scaleType}</span> : null
+                scaleValue >= rangElem ? <span key={rangElem.toString()}>{scaleType}</span> : null
             )}
         </div>
-    ) 
+    );
 }
 
-
-export default CareScale; 
+// Exportation du composant pour pouvoir l'utiliser dans d'autres fichiers
+export default CareScale;
