@@ -6,15 +6,15 @@ function Cart({cart, updateCart, Selectedcatego}) {
 	const total = cart.reduce(
 		(acc, plantType) => acc + plantType.amount * plantType.price,
 		0
-	)
+	);
 
-	useEffect(() => {
-		alert(`J'aurai ${total}€ à payer 💸`)
-	}, [total, Selectedcatego])
+	// useEffect(() => {
+	// 	alert(`J'aurai ${total}€ à payer 💸`)
+	// }, [total])
 
-	useEffect(() => {
-		alert('Bienvenue dans La maison jungle')
-	}, [])
+	// useEffect(() => {
+	// 	alert('Bienvenue dans La maison jungle')
+	// }, [])
 
 	useEffect(() => {
 		document.title = `LMJ: ${total}€ d'achats`
