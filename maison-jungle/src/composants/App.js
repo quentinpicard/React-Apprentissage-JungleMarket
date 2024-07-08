@@ -11,6 +11,7 @@ import { useState } from 'react';
 
 function App() {
   const [cart, updateCart] = useState([])
+  const [Selectedcatego, setActiveCategory] = useState('');
   
   return (
       <div>
@@ -22,7 +23,7 @@ function App() {
         <div className='main-container'>
           
           <Cart cart={cart} updateCart={updateCart} />
-          <ShoppingList cart={cart} updateCart={updateCart} />
+          <ShoppingList cart={cart} updateCart={updateCart} Selectedcatego={Selectedcatego} setActiveCategory={setActiveCategory} />
         </div>
         <Footer/>
       </div>

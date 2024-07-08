@@ -1,11 +1,11 @@
-// Importation de la liste des plantes depuis un fichier local
-import { plantList } from '../data/plantList';
-
 // Importation du fichier CSS pour appliquer les styles
 import '../style/ShoppingList.css';
 
+
+
 // Définition du composant fonctionnel Categories
 function Categories ({ Selectedcatego, setActiveCategory, categories }) {
+
     return (
         <div className='lmg-type-categories'>
             {/* Conteneur principal pour les catégories */}

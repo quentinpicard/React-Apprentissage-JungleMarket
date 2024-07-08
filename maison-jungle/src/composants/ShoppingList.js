@@ -2,11 +2,11 @@ import { plantList } from '../data/plantList';
 import '../style/ShoppingList.css'
 import PlantItem from './PlantItem';
 import Categories from './Categories';
-import { useState } from 'react';
 
 
-function ShoppingList ({cart, updateCart}) {
-    const [Selectedcatego, setActiveCategory] = useState('');
+
+function ShoppingList ({cart, updateCart, Selectedcatego, setActiveCategory}) {
+    
     const categories = plantList.reduce( // récupère les valeurs de catégories dans le tableau plantList et on le met dans une boucle reduce()
         (acc, plant) =>
             acc.includes(plant.category)? acc:acc.concat(plant.category), [] // on regarde la valeur de category et on le concat dans un tableau vide []

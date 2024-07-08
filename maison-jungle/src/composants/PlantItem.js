@@ -1,11 +1,11 @@
 import CareScale from './CareScale';
 import '../style/PlantItem.css'
 
-function handleClick (plantName){ //permet de gérer les événement sur react
-    // console.log("hello world");
-    alert (`Vous voulez acheter 1 ${plantName} ? Très bon choix :) `);
+// function handleClick (plantName){ //permet de gérer les événement sur react
+//     // console.log("hello world");
+//     alert (`Vous voulez acheter 1 ${plantName} ? Très bon choix :) `);
 
-}
+// }
 
 
 function PlantItem ({name, cover, id, light, water}){
